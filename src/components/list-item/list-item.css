@@ -1,0 +1,98 @@
+.list-item {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* .navigation.open .list-item:hover {
+  transform: translateX(20px);
+} */
+
+.icon::before{
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+}
+
+.icon {
+  position: relative;
+  display: block;
+  min-width: 55px;
+  height: 55px;
+  line-height: 60px;
+  color: #222;
+  border-radius: 10px;
+  font-size: 1.75em;
+  transition: 0.5s;
+}
+
+.list-item.active .icon.blue{
+  color: blue;
+}
+.navigation ul li.active a .icon.blue {
+  color: #fff;
+  background: blue;
+}
+
+.list-item.active .icon.red{
+  color: red;
+}
+.navigation ul li.active a .icon.red {
+  color: #fff;
+  background: red;
+}
+
+.list-item.active .icon.orange{
+  color: orange;
+}
+.navigation ul li.active a .icon.orange {
+  color: #fff;
+  background: orange;
+}
+
+.list-item.active .icon.purple{
+  color: purple;
+}
+.navigation ul li.active a .icon.purple {
+  color: #fff;
+  background: purple;
+}
+
+.list-item.active .icon.green{
+  color: green;
+}
+.navigation ul li.active a .icon.green {
+  color: #fff;
+  background: green;
+}
+
+.navigation ul li.active a .text.blue {
+  color: blue;
+}
+
+.navigation ul li.active a .text.red {
+  color: red;
+}
+
+.navigation ul li.active a .text.orange {
+  color: orange;
+}
+
+.navigation ul li.active a .text.purple {
+  color: purple;
+}
+
+.navigation ul li.active a .text.green {
+  color: green;
+}

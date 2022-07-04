@@ -1,59 +1,24 @@
 import { useState } from 'react';
 import './App.css';
 
-function App() {
+import List from './components/list/List';
 
+function App() {
   const [toggle, setToggle] = useState('close');
 
+  //opens menu and changes the menu icon
   const onMenuClick =(toggleState) => toggleState === 'close' ? setToggle('open'): setToggle('close')
 
-
   return (
-  
-    
       <div className='container'>
         <div className={`navigation ${toggle}`}>
           <div className='menu-toggle'
             onClick={()=> onMenuClick(toggle)}
         ></div>
-        <ul className='list'>
-       
-            <li className='list-item'
-          
-          >
-            <a href='#'>
-              <span className='icon'>
-                <ion-icon name='alert-outline'></ion-icon>
-              </span>
-              <span className='text'>About</span>
-            </a>
-            </li>
-            <li className='list-item'
-           
-          >
-            <a href='#'>
-              <span className='icon'>
-                <ion-icon name='call-outline'></ion-icon>
-              </span>
-              <span className='text'>Contact</span>
-            </a>
-            </li>
-            <li className='list-item'
-           
-          >
-            <a href='#'>
-              <span className='icon'>
-                <ion-icon name='grid-outline'></ion-icon>
-              </span>
-              <span className='text'>Portfolio</span>
-            </a>
-          </li>
-         
-          </ul>
+        <List/>
   </div>
   </div>
-   
   );
-}
+};
 
 export default App;
