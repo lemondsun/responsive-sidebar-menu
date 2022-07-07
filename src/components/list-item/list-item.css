@@ -11,11 +11,6 @@
   cursor: pointer;
   transition: 0.5s;
 }
-
-/* .navigation.open .list-item:hover {
-  transform: translateX(20px);
-} */
-
 .icon::before{
   text-decoration: none;
   position: relative;
@@ -24,7 +19,6 @@
   text-align: center;
   align-items: center;
 }
-
 .icon {
   position: relative;
   display: block;
@@ -36,7 +30,6 @@
   font-size: 1.75em;
   transition: 0.5s;
 }
-
 .list-item.active .icon.blue{
   color: blue;
 }
@@ -44,7 +37,6 @@
   color: #fff;
   background: blue;
 }
-
 .list-item.active .icon.red{
   color: red;
 }
@@ -52,7 +44,6 @@
   color: #fff;
   background: red;
 }
-
 .list-item.active .icon.orange{
   color: orange;
 }
@@ -60,7 +51,6 @@
   color: #fff;
   background: orange;
 }
-
 .list-item.active .icon.purple{
   color: purple;
 }
@@ -68,7 +58,6 @@
   color: #fff;
   background: purple;
 }
-
 .list-item.active .icon.green{
   color: green;
 }
@@ -76,23 +65,18 @@
   color: #fff;
   background: green;
 }
-
 .navigation ul li.active a .text.blue {
   color: blue;
 }
-
 .navigation ul li.active a .text.red {
   color: red;
 }
-
 .navigation ul li.active a .text.orange {
   color: orange;
 }
-
 .navigation ul li.active a .text.purple {
   color: purple;
 }
-
 .navigation ul li.active a .text.green {
   color: green;
 }

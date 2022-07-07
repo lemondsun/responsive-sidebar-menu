@@ -6,7 +6,7 @@ import List from './components/list/List';
 function App() {
   const [toggle, setToggle] = useState('close');
 
-  //opens menu and changes the menu icon
+  //opens menu
   const onMenuClick =(toggleState) => toggleState === 'close' ? setToggle('open'): setToggle('close')
 
   return (
