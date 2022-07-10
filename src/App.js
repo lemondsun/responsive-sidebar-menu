@@ -4,21 +4,20 @@ import './App.css';
 import List from './components/list/List';
 
 function App() {
-  const [toggle, setToggle] = useState('close');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  //opens menu
-  const onMenuClick =(toggleState) => toggleState === 'close' ? setToggle('open'): setToggle('close')
+  // const onMenuClick = (toggleState) =>
+  //   toggleState === 'close' ? setToggle('open') : setToggle('close');
+  const onMenuClick = (currentMenuState) => setIsMenuOpen(!currentMenuState);
 
   return (
-      <div className='container'>
-        <div className={`navigation ${toggle}`}>
-          <div className='menu-toggle'
-            onClick={()=> onMenuClick(toggle)}
-        ></div>
-        <List/>
-  </div>
-  </div>
+    <div className="container">
+      <div className={`navigation ${isMenuOpen ? 'open' : 'close'}`}>
+        <div className="menu-toggle" onClick={() => onMenuClick(isMenuOpen)} />
+        <List />
+      </div>
+    </div>
   );
-};
+}
 
 export default App;

@@ -1,19 +1,22 @@
 import React from 'react';
-import '../list-item/list-item.css'
+import '../list-item/list-item.css';
 
-export default function ListItem(props) {
-  const { href, icon, text, color, active, menuNumber } = { ...props };
-  
+const ListItem = (props) => {
+  const { item, active, menuNumber } = { ...props };
+
   return (
-    <li className={`list-item ${active}`}
+    <li
+      className={`list-item ${active && 'active'}`}
       onClick={() => props.clickHandler(menuNumber)}
     >
-            <a href={href}>
-              <span className={`icon ${color}`}>
-                <ion-icon name={icon}></ion-icon>
-              </span>
-        <span className={`text ${color}`}>{text}</span>
-            </a>
-            </li>
-  )
-}
+      <a href={item.href}>
+        <span className={`icon ${item.color}`}>
+          <ion-icon name={item.icon} />
+        </span>
+        <span className={`text ${item.color}`}>{item.text}</span>
+      </a>
+    </li>
+  );
+};
+
+export default ListItem;
